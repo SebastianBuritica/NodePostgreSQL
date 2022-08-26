@@ -1,0 +1,12 @@
+/Set up of our index.js, app.js and database.js files.
+
+/After the connecting to our database successfully, we proceed to create our database  tables. (modelado de datos)
+
+/The tables structure is created in our schemas, following the diagram example we need to connect our two tables as 
+each project has many tasks and each task has many projects, we do that in our Project.js file.
+
+/Now we will set up routes for our projects first creating a file in our routes folder, we set up our routes,
+it means router.post, router.get, etc. Keep in mind after we create a route we have to create a controller.
+
+/We set up our controllers for each one project and task, after we import the model from each schema
+
