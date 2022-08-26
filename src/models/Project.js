@@ -29,7 +29,7 @@ export const Project = sequelize.define(
   },
   // If this changes to false for example the database can be updated with force: true in our index.js
   {
-    timestamps: false,
+    timestamps: true,
   }
 );
 

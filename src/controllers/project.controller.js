@@ -10,7 +10,7 @@ import { Task } from "../models/Task.js";
 export async function getProjects(req, res) {
   try {
     const projects = await Project.findAll({
-      atributes: ["id", "name", "priority", "description", "deliverydate"],
+      atributes: ["id", "name", "priority", "description"],
     });
     res.json(projects);
   } catch (error) {
@@ -21,17 +21,17 @@ export async function getProjects(req, res) {
 }
 
 export async function createProject(req, res) {
-  const { name, priority, description, deliveryDate } = req.body;
+  const { name, priority, description } = req.body;
   try {
     let newProject = await Project.create(
       {
         name,
         priority,
         description,
-        deliveryDate: new Date(deliveryDate).getTime(),
+        
       },
       {
-        fields: ["name", "priority", "description", "deliverydate"],
+        fields: ["name", "priority", "description"],
       }
     );
     return res.json(newProject);

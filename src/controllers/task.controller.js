@@ -17,8 +17,7 @@ export async function createTask(req, res) {
 export async function getTasks(req, res) {
   try {
     const tasks = await Task.findAll({
-      attributes: ["id", "projectId", "name", "done"],
-      order: [["id", "DESC"]],
+      attributes: ["id", "projectId", "name", "done"]      
     });
     res.json(tasks);
   } catch (error) {
